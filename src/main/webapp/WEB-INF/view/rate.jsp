@@ -11,22 +11,24 @@
 <table class="table table-striped table-hover">
         <thead>
           <tr>
-            <th>글번호</th>
-            <th>제목</th>
-            <th>작성자</th>
-            <th>작성일시</th>
+            
+            <th>통화코드</th>
+            <th>국가/통화명</th>
+            <th>환율</th>
+            <th>송금 받으실 때</th>
+            <th>송금 보내실 때</th>
             <th></th>
           </tr>
         </thead>
         <tbody>
           <c:forEach var="post" items="${rate}">
             <tr>
-              <td>${post.result}</td>
+              
               <td>${post.cur_unit}</td>
               <td>${post.cur_nm}</td>
-              <td>${post.ten_dd_efee_r}</td>
-              <td>${post.kftc_bkpr}
-              </td>
+              <td>${post.bkpr}</td>
+              <td>${post.ttb}</td>
+              <td>${post.tts}</td>
             </tr>
           </c:forEach>
         </tbody>
