@@ -20,7 +20,8 @@ public class RateDAO {
 	
 	public List<RateVO> getRateList() throws JsonMappingException, JsonProcessingException{
 		RestTemplate restTemplate = new RestTemplate();
-		String url = "https://www.koreaexim.go.kr/site/program/financial/exchangeJSON?authkey=" + (new Secret().getRatekey()) + "&data=AP01";
+		String url = "https://www.koreaexim.go.kr/site/program/financial/exchangeJSON?authkey="
+				+ (new Secret().getRatekey()) + "&searchdate=20230913"+ "&data=AP01";
 		ResponseEntity<String> response = restTemplate.exchange(url, HttpMethod.GET, null, String.class);
 		
 		String responseBody = null;
